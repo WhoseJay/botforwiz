@@ -109,13 +109,13 @@ async def help(ctx):
     for item in itemlist:
         paginator.add_line(item)
     paginator.add_line('')
-    paginator.add_line('Commands that have a space between them can be used as either name')
-    paginator.add_line('Example: You could use either gdc or glassdominocrown')
+    paginator.add_line('Example:')
+    paginator.add_line('?2018overlord')
     paginator.add_line('')
-    paginator.add_line('Bot made by WhoseJay#5905 and Feelin Kali ◇ (Im Jewish)#0420')
+    paginator.add_line('Bot made by WhoseJay#5905')
     for page in paginator.pages:
         await ctx.author.send(page)
-    await ctx.send('Sent the help message to your dms')
+    await ctx.send('Check your DMS!✔️')
 
 @bot.event
 async def on_message(message):
@@ -151,7 +151,7 @@ async def on_message(message):
             embed = discord.Embed(title=name, description=value, color=0xff003c)
             embed.set_image(url=imageurl)
             embed.set_thumbnail(url='https://static.wixstatic.com/media/c45e5a_194c30ccc4b64c9489331a78b145e13e~mv2.png')
-            embed.set_footer(text="Bot made by the CCValueBot Team")
+            embed.set_footer(text="Bot made by the WhoseJay#5905")
             embed.timestamp = datetime.datetime.now(tz)
             await message.channel.send(embed=embed)
         else:
