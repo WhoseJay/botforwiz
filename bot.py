@@ -115,7 +115,7 @@ async def help(ctx):
     paginator.add_line('Bot made by WhoseJay#5905')
     for page in paginator.pages:
         await ctx.author.send(page)
-    await ctx.send('Check your DMS!✔️')
+    await ctx.send('Check your DMS! :white_check_mark:')
 
 @bot.event
 async def on_message(message):
