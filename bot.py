@@ -100,10 +100,10 @@ async def help(ctx):
     itemlist = ['**'+item+'**' for item in worksheet.col_values(1)]
     paginator = commands.Paginator(suffix='', prefix='')
     paginator.add_line('__Commands:__')
-    paginator.add_line('**'+PREFIX+'help** - Displays this help dialogue to your dms')
+    paginator.add_line('**'+PREFIX+'help** - Displays this help dialogue to your DMS')
     paginator.add_line('**'+PREFIX+'say** - Make the bot say anything')
-    paginator.add_line('**'+PREFIX+'[itemname]** - Displays the value of an item (you may also just type the item without the prefix into my dms)')
-    paginator.add_line('**'+PREFIX+'list** - Sends a list of all the item values in our database to your dms')
+    paginator.add_line('**'+PREFIX+'[itemname]** - Displays the value of an item (you may also just type the item without the prefix into my DMS)')
+    paginator.add_line('**'+PREFIX+'list** - Sends a list of all the item values in our database in DMS')
     paginator.add_line('')
     paginator.add_line('__Item List__:')
     for item in itemlist:
