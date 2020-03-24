@@ -112,7 +112,7 @@ async def help(ctx):
     paginator.add_line('Commands that have a space between them can be used as either name')
     paginator.add_line('Example: You could use either gdc or glassdominocrown')
     paginator.add_line('')
-    paginator.add_line('Bot made by WhoseJay#5905')
+    paginator.add_line('Bot made by WhoseJay#5905 and Feelin Kali ◇ (Im Jewish)#0420')
     for page in paginator.pages:
         await ctx.author.send(page)
     await ctx.send('Sent the help message to your dms')
@@ -145,13 +145,13 @@ async def on_message(message):
             if worksheet.cell(cell.row, cell.col+3).value != '':
                 imageurl = worksheet.cell(cell.row, cell.col+3).value
             else:
-                imageurl = 'https://cdn.discordapp.com/attachments/691826915304144897/692107926911058087/discord_picture.jpg'
+                imageurl = 'https://static.wixstatic.com/media/c45e5a_194c30ccc4b64c9489331a78b145e13e~mv2.png'
             name = worksheet.cell(cell.row, cell.col+1).value
             value = worksheet.cell(cell.row, cell.col+2).value
             embed = discord.Embed(title=name, description=value, color=0xff003c)
             embed.set_image(url=imageurl)
-            embed.set_thumbnail(url='https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/1/3/d/13d3ee698d043977e5e9247c9f3ee9589b387ccc.png')
-            embed.set_footer(text="Bot made by WhoseJay#5905")
+            embed.set_thumbnail(url='https://static.wixstatic.com/media/c45e5a_194c30ccc4b64c9489331a78b145e13e~mv2.png')
+            embed.set_footer(text="Bot made by the CCValueBot Team")
             embed.timestamp = datetime.datetime.now(tz)
             await message.channel.send(embed=embed)
         else:
