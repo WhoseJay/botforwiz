@@ -155,7 +155,7 @@ async def on_message(message):
             embed.timestamp = datetime.datetime.now(tz)
             await message.channel.send(embed=embed)
         else:
-            await message.channel.send("Please use value commands in <#692149362683412534>")
+            await message.channel.send("Please use value commands in <#688058643324731441>")
 @bot.event
 async def on_raw_reaction_add(payload):
     if payload.message_id == 688161571876372563:
