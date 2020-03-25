@@ -150,7 +150,7 @@ async def on_message(message):
             value = worksheet.cell(cell.row, cell.col+2).value
             embed = discord.Embed(title=name, description=value, color=0xff003c)
             embed.set_image(url=imageurl)
-            embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/691826915304144897/692107926911058087/discord_picture.jpg')
+            embed.set_thumbnail(url='https://pbs.twimg.com/profile_images/1074825702791409670/bFAri1Ik_400x400.jpg')
             embed.set_footer(text="Bot made by WhoseJay#5905")
             embed.timestamp = datetime.datetime.now(tz)
             await message.channel.send(embed=embed)
