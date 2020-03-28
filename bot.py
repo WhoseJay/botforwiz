@@ -110,7 +110,7 @@ async def help(ctx):
         paginator.add_line(item)
     paginator.add_line('')
     paginator.add_line('Example:')
-    paginator.add_line('?2018overlord')
+    paginator.add_line('?50amazongift')
     paginator.add_line('')
     paginator.add_line('Bot made by WhoseJay#5905')
     for page in paginator.pages:
@@ -145,12 +145,12 @@ async def on_message(message):
             if worksheet.cell(cell.row, cell.col+3).value != '':
                 imageurl = worksheet.cell(cell.row, cell.col+3).value
             else:
-                imageurl = 'https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/1/3/d/13d3ee698d043977e5e9247c9f3ee9589b387ccc.png'
+                imageurl = 'https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c518.png'
             name = worksheet.cell(cell.row, cell.col+1).value
             value = worksheet.cell(cell.row, cell.col+2).value
             embed = discord.Embed(title=name, description=value, color=0xff003c)
             embed.set_image(url=imageurl)
-            embed.set_thumbnail(url='https://pbs.twimg.com/profile_images/1074825702791409670/bFAri1Ik_400x400.jpg')
+            embed.set_thumbnail(url='https://pngimg.com/uploads/amazon/amazon_PNG5.png')
             embed.set_footer(text="Bot made by WhoseJay#5905")
             embed.timestamp = datetime.datetime.now(tz)
             await message.channel.send(embed=embed)
