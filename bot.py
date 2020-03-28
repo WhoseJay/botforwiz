@@ -12,7 +12,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from discord.ext import commands
 from discord.ext.commands import has_permissions, MissingPermissions
 load_dotenv()
-whitelist = ['values', 'test', 'staff-bots']
+whitelist = ['values', 'bot-commands', 'staff-bots']
 TOKEN = os.getenv('DISCORD_TOKEN')
 PREFIX = os.getenv('PREFIX')
 SPREADSHEET_ID = os.getenv('SPREADSHEET_ID')
