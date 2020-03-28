@@ -234,6 +234,6 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_ready():
     print(f'{bot.user} has connected to Discord!')
-    game = discord.Activity(type=discord.ActivityType.listening, name=PREFIX+'help and DMs')
+    game = discord.Activity(type=discord.ActivityType.listening, name=PREFIX+'stock')
     await bot.change_presence(activity=game)
 bot.run(TOKEN)
