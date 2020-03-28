@@ -151,7 +151,7 @@ async def on_message(message):
             embed = discord.Embed(title=name, description=value, color=0xff003c)
             embed.set_image(url=imageurl)
             embed.set_thumbnail(url='https://pngimg.com/uploads/amazon/amazon_PNG27.png')
-            embed.set_footer(text="Bot made by aSells Team")
+            embed.set_footer(text="Bot made by aStock Team")
             embed.timestamp = datetime.datetime.now(tz)
             await message.channel.send(embed=embed)
         else:
