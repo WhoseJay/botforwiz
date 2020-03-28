@@ -82,7 +82,7 @@ async def list(ctx):
         print(str(e.__class__.__name__))
     
     paginator = commands.Paginator(suffix='', prefix='')
-    paginator.add_line('__Here is a complete list of the item values in our database:__')
+    paginator.add_line('__Here is a complete list of the commands:__')
     for row in item_values:
         paginator.add_line(row[1] + ' - ' + row[2])
     for page in paginator.pages:
@@ -155,7 +155,7 @@ async def on_message(message):
             embed.timestamp = datetime.datetime.now(tz)
             await message.channel.send(embed=embed)
         else:
-            await message.channel.send("Please use value commands in <#693583944674967615>")
+            await message.channel.send("To see the current aStock's shop, please use this command in <#693583944674967615>!")
 @bot.event
 async def on_raw_reaction_add(payload):
     if payload.message_id == 688161571876372563:
