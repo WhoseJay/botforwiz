@@ -145,7 +145,7 @@ async def on_message(message):
             if worksheet.cell(cell.row, cell.col+3).value != '':
                 imageurl = worksheet.cell(cell.row, cell.col+3).value
             else:
-                imageurl = 'https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c518.png'
+                imageurl = 'https://cdn.discordapp.com/attachments/693609061891178526/693623969185660988/img.png'
             name = worksheet.cell(cell.row, cell.col+1).value
             value = worksheet.cell(cell.row, cell.col+2).value
             embed = discord.Embed(title=name, description=value, color=0xff003c)
