@@ -1,4 +1,4 @@
-\# bot.py
+bot.py
 import os
 import discord
 import gspread
