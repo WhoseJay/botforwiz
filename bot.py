@@ -145,12 +145,12 @@ async def on_message(message):
             if worksheet.cell(cell.row, cell.col+3).value != '':
                 imageurl = worksheet.cell(cell.row, cell.col+3).value
             else:
-                imageurl = 'https://static.wixstatic.com/media/c45e5a_194c30ccc4b64c9489331a78b145e13e~mv2.png'
+                imageurl = 'https://images-ext-1.discordapp.net/external/qxCMAJF7eXXp8dl3Kz9zBvxa1HmpOCxtWeWuk0iUF4E/%3Fsize%3D128/https/cdn.discordapp.com/icons/690492878350188545/a_b1b25e5cf1b0477866251745cb2bddfa.gif'
             name = worksheet.cell(cell.row, cell.col+1).value
             value = worksheet.cell(cell.row, cell.col+2).value
             embed = discord.Embed(title=name, description=value, color=0xff003c)
             embed.set_image(url=imageurl)
-            embed.set_thumbnail(url='https://static.wixstatic.com/media/c45e5a_194c30ccc4b64c9489331a78b145e13e~mv2.png')
+            embed.set_thumbnail(url='https://images-ext-1.discordapp.net/external/qxCMAJF7eXXp8dl3Kz9zBvxa1HmpOCxtWeWuk0iUF4E/%3Fsize%3D128/https/cdn.discordapp.com/icons/690492878350188545/a_b1b25e5cf1b0477866251745cb2bddfa.gif')
             embed.set_footer(text="Bot made by the CCValueBot Team")
             embed.timestamp = datetime.datetime.now(tz)
             await message.channel.send(embed=embed)
