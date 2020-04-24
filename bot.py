@@ -12,7 +12,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from discord.ext import commands
 from discord.ext.commands import has_permissions, MissingPermissions
 load_dotenv()
-whitelist = ['bot-commands', 'mod-only', 'bot-command-staff']
+whitelist = ['values', 'test', 'staff-bots']
 TOKEN = os.getenv('DISCORD_TOKEN')
 PREFIX = os.getenv('PREFIX')
 SPREADSHEET_ID = os.getenv('SPREADSHEET_ID')
@@ -100,22 +100,22 @@ async def help(ctx):
     itemlist = ['**'+item+'**' for item in worksheet.col_values(1)]
     paginator = commands.Paginator(suffix='', prefix='')
     paginator.add_line('__Commands:__')
-    paginator.add_line('**'+PREFIX+'help** - Displays this help dialogue to your DMS')
+    paginator.add_line('**'+PREFIX+'help** - Displays this help dialogue to your dms')
     paginator.add_line('**'+PREFIX+'say** - Make the bot say anything')
-    paginator.add_line('**'+PREFIX+'[itemname]** - Displays the value of an item (you may also just type the item without the prefix into my DMS)')
-    paginator.add_line('**'+PREFIX+'list** - Sends a list of all the item values in our database in DMS')
+    paginator.add_line('**'+PREFIX+'[itemname]** - Displays the value of an item (you may also just type the item without the prefix into my dms)')
+    paginator.add_line('**'+PREFIX+'list** - Sends a list of all the item values in our database to your dms')
     paginator.add_line('')
     paginator.add_line('__Item List__:')
     for item in itemlist:
         paginator.add_line(item)
     paginator.add_line('')
-    paginator.add_line('Example:')
-    paginator.add_line('z!empreyanarmour')
+    paginator.add_line('Commands that have a space between them can be used as either name')
+    paginator.add_line('Example: You could use either gdc or glassdominocrown')
     paginator.add_line('')
-    paginator.add_line('Bot made by WhoseJay#5905')
+    paginator.add_line('Bot made by WhoseJay#5905 and Feelin Kali ◇ (Im Jewish)#0420')
     for page in paginator.pages:
         await ctx.author.send(page)
-    await ctx.send('Check your DMS! :white_check_mark:')
+    await ctx.send('Sent the help message to your dms')
 
 @bot.event
 async def on_message(message):
@@ -145,17 +145,17 @@ async def on_message(message):
             if worksheet.cell(cell.row, cell.col+3).value != '':
                 imageurl = worksheet.cell(cell.row, cell.col+3).value
             else:
-                imageurl = 'https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/1/3/d/13d3ee698d043977e5e9247c9f3ee9589b387ccc.png'
+                imageurl = 'https://static.wixstatic.com/media/c45e5a_194c30ccc4b64c9489331a78b145e13e~mv2.png'
             name = worksheet.cell(cell.row, cell.col+1).value
             value = worksheet.cell(cell.row, cell.col+2).value
             embed = discord.Embed(title=name, description=value, color=0xff003c)
             embed.set_image(url=imageurl)
-            embed.set_thumbnail(url='https://pbs.twimg.com/profile_images/1074825702791409670/bFAri1Ik_400x400.jpg')
-            embed.set_footer(text="Bot made by WhoseJay#5905")
+            embed.set_thumbnail(url='https://static.wixstatic.com/media/c45e5a_194c30ccc4b64c9489331a78b145e13e~mv2.png')
+            embed.set_footer(text="Bot made by the CCValueBot Team")
             embed.timestamp = datetime.datetime.now(tz)
             await message.channel.send(embed=embed)
         else:
-            await message.channel.send("Please use value commands in <#692169696044122190>")
+            await message.channel.send("Please use value commands in <#686761666968289340>")
 @bot.event
 async def on_raw_reaction_add(payload):
     if payload.message_id == 688161571876372563:
