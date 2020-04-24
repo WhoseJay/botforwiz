@@ -1,4 +1,4 @@
-# bot.py
+\# bot.py
 import os
 import discord
 import gspread
@@ -110,9 +110,9 @@ async def help(ctx):
         paginator.add_line(item)
     paginator.add_line('')
     paginator.add_line('Commands that have a space between them can be used as either name')
-    paginator.add_line('Example: You could use either gdc or glassdominocrown')
+    paginator.add_line('Example: z?thekingsadorments')
     paginator.add_line('')
-    paginator.add_line('Bot made by WhoseJay#5905  Also, Thanks to Crashthewrx for the values!')
+    paginator.add_line('Bot made by WhoseJay#5905 [Thanks to Jordan💥💤#2013 for the values!]')
     for page in paginator.pages:
         await ctx.author.send(page)
     await ctx.send('Sent the help message to your dms')
@@ -151,7 +151,165 @@ async def on_message(message):
             embed = discord.Embed(title=name, description=value, color=0xff003c)
             embed.set_image(url=imageurl)
             embed.set_thumbnail(url='https://images-ext-1.discordapp.net/external/qxCMAJF7eXXp8dl3Kz9zBvxa1HmpOCxtWeWuk0iUF4E/%3Fsize%3D128/https/cdn.discordapp.com/icons/690492878350188545/a_b1b25e5cf1b0477866251745cb2bddfa.gif')
-            embed.set_footer(text="Bot made by the CCValueBot Team")
+            embed.set_footer(text="Bot made by the WhoseJay#5905
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             
+                             ")
             embed.timestamp = datetime.datetime.now(tz)
             await message.channel.send(embed=embed)
         else:
