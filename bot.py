@@ -112,7 +112,7 @@ async def help(ctx):
     paginator.add_line('Commands that have a space between them can be used as either name')
     paginator.add_line('Example: You could use either gdc or glassdominocrown')
     paginator.add_line('')
-    paginator.add_line('Bot made by WhoseJay#5905 and Feelin Kali ◇ (Im Jewish)#0420')
+    paginator.add_line('Bot made by WhoseJay#5905 [Thanks to Jordan💥💤#2013 for the values!]')
     for page in paginator.pages:
         await ctx.author.send(page)
     await ctx.send('Sent the help message to your dms')
