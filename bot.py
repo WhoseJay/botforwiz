@@ -110,7 +110,7 @@ async def help(ctx):
         paginator.add_line(item)
     paginator.add_line('')
     paginator.add_line('Example:')
-    paginator.add_line('?empreyanarmour')
+    paginator.add_line('z!empreyanarmour')
     paginator.add_line('')
     paginator.add_line('Bot made by WhoseJay#5905')
     for page in paginator.pages:
