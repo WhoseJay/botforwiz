@@ -12,7 +12,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from discord.ext import commands
 from discord.ext.commands import has_permissions, MissingPermissions
 load_dotenv()
-whitelist = ['products', 'bot-commands', 'shops']
+whitelist = ['bot-commands', 'mod-only', 'bot-command-staff']
 TOKEN = os.getenv('DISCORD_TOKEN')
 PREFIX = os.getenv('PREFIX')
 SPREADSHEET_ID = os.getenv('SPREADSHEET_ID')
@@ -82,7 +82,7 @@ async def list(ctx):
         print(str(e.__class__.__name__))
     
     paginator = commands.Paginator(suffix='', prefix='')
-    paginator.add_line('__Here is a complete list of the commands:__')
+    paginator.add_line('__Here is a complete list of the item values in our database:__')
     for row in item_values:
         paginator.add_line(row[1] + ' - ' + row[2])
     for page in paginator.pages:
@@ -110,7 +110,7 @@ async def help(ctx):
         paginator.add_line(item)
     paginator.add_line('')
     paginator.add_line('Example:')
-    paginator.add_line('?50amazongift')
+    paginator.add_line('?empreyanarmour')
     paginator.add_line('')
     paginator.add_line('Bot made by WhoseJay#5905')
     for page in paginator.pages:
@@ -145,17 +145,17 @@ async def on_message(message):
             if worksheet.cell(cell.row, cell.col+3).value != '':
                 imageurl = worksheet.cell(cell.row, cell.col+3).value
             else:
-                imageurl = 'https://cdn140.picsart.com/323139604142201.png'
+                imageurl = 'https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/1/3/d/13d3ee698d043977e5e9247c9f3ee9589b387ccc.png'
             name = worksheet.cell(cell.row, cell.col+1).value
             value = worksheet.cell(cell.row, cell.col+2).value
             embed = discord.Embed(title=name, description=value, color=0xff003c)
             embed.set_image(url=imageurl)
-            embed.set_thumbnail(url='https://cdn130.picsart.com/323140089338201.png')
-            embed.set_footer(text="Bot made by aStock Team")
+            embed.set_thumbnail(url='https://pbs.twimg.com/profile_images/1074825702791409670/bFAri1Ik_400x400.jpg')
+            embed.set_footer(text="Bot made by WhoseJay#5905")
             embed.timestamp = datetime.datetime.now(tz)
             await message.channel.send(embed=embed)
         else:
-            await message.channel.send("To see the current aStock's shop, please use this command in <#693583944674967615>!")
+            await message.channel.send("Please use value commands in <#692169696044122190>")
 @bot.event
 async def on_raw_reaction_add(payload):
     if payload.message_id == 688161571876372563:
@@ -234,6 +234,6 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_ready():
     print(f'{bot.user} has connected to Discord!')
-    game = discord.Activity(type=discord.ActivityType.listening, name=PREFIX+'stock')
+    game = discord.Activity(type=discord.ActivityType.listening, name=PREFIX+'help and DMs')
     await bot.change_presence(activity=game)
 bot.run(TOKEN)
